@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="video_container">
+        <div class="video_controls">
+            <div class="video_main">
+                <video class="source" src="/videos/vde2.mp4"></video>
+            </div>
+            <div class="controls active">
+                <div class="progress-area">
+                    <canvas class="bufferedBar"></canvas>
+                    <div class="progress-bar">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="controls_lists">
+                    <div class="control_left">
+                        <span class="icon">
+                            <i class="fa-solid fa-play"></i>
+                        </span>
+                        <span class="icon">
+                            <i class="bi bi-fast-forward"></i>
+                        </span>
+                    </div>
+                    <div class="controls_right">
+                        <div class="timer icon">
+                            <span class="current">0:00</span> /
+                            <span class="duration">0:00</span>
+                        </div>
+                        <span class="icon">
+                            <i class="fa-solid fa-gear"></i>
+                        </span>
+                        <span class="icon">
+                            <i class="fa-solid fa-volume-high"></i>
+                        </span>
+                        <span class="icon">
+                            <i class="fa-solid fa-expand"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="volume_container volumecart">
+                <div class="volume_conte">
+                    <div class="volume">
+                        <div class="volume_bar">
+                            <span></span>
+                        </div>
+                        <div class="volume_percentage">100%</div>
+                    </div>
+                </div>
+            </div>
+            <div class="setting setingbtn playback">
+                <h2>ความเร็ว</h2>
+                <ul>
+                    <li data-speed="0.25">0.25</li>
+
+                    <li data-speed="0.5">0.5</li>
+
+                    <li data-speed="0.75">0.75</li>
+
+                    <li data-speed="1" class="active">ปกติ</li>
+
+                    <li data-speed="1.25">1.25</li>
+
+                    <li data-speed="1.5">1.5</li>
+
+                    <li data-speed="1.75">1.75</li>
+
+                    <li data-speed="2">2</li>
+
+                    <li data-speed="3">3X</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+</html>

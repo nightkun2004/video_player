@@ -1,0 +1,223 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.video_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video_controls {
+    position: relative;
+}
+
+.video_main video {
+    width: 100%;
+    height: 100%;
+}
+
+.bufferedBar {
+    width: 100%;
+    height: 100%;
+}
+
+
+.controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    transform: translateY(180%);
+    transition: .5s;
+}
+
+.controls.active {
+    transform: translateY(0);
+}
+
+.controls_lists {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.286);
+    box-shadow: 0 0 40px 10px rgb(0 0 0 / 25%);
+}
+
+.controls_lists .icon {
+    font-size: 19px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.controls_right,
+.control_left {
+    display: flex;
+    align-items: center;
+}
+
+.controls_right .icon,
+.control_left .icon {
+    font-size: 24px;
+    color: #fff;
+    padding-left: 15px;
+}
+
+.controls .controls_right .timer {
+    display: inline-block;
+    font-size: 19px;
+    white-space: nowrap;
+    color: #fff;
+    margin-left: 5px;
+    text-align: center;
+}
+
+.video_controls .controls .progress-area {
+    width: 100%;
+    height: 5px;
+    margin: auto;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    position: relative;
+}
+
+.controls .progress-area .progress-bar {
+    position: relative;
+    width: 0;
+    background: #fff;
+    height: inherit;
+    border-radius: inherit;
+    cursor: pointer;
+}
+
+.controls .progress-area .progress-bar::before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    right: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+}
+
+.controls .progress-area .bufferedBar {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width: 100%;
+    height: inherit;
+}
+
+.control_left .icon .fa-forward-step {
+    transition: .2s;
+}
+
+.controls_right .icon .fa-gear {
+    transition: .3s;
+}
+
+.controls_right .icon .fa-gear.active {
+    transform: rotate(45deg);
+}
+
+.volume_container {
+    position: absolute;
+    bottom: 68px;
+    right: 30px;
+    color: #007dea;
+    background-color: rgba(62, 60, 60, 0.55);
+    width: 50px;
+    border-radius: 10px;
+    height: 100px;
+    display: none;
+}
+
+.volume_conte {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.volume {
+    position: relative;
+    padding: 10px;
+}
+
+.volume_bar {
+    width: 5px;
+    height: 70px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.volume_bar span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 0;
+    width: 100%;
+    transition: 0.3s ease-in-out;
+}
+
+.volume_percentage {
+    position: absolute;
+    bottom: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 12px;
+}
+
+.setting {
+    position: absolute;
+    bottom: 68px;
+    border-radius: 10px;
+    color: #fff;
+    right: 38px;
+    display: none;
+    background-color: rgba(62, 60, 60, 0.55);
+    & h2 {
+        padding: 10px;
+        font-size: 19px;
+        font-weight: 500;
+    }
+}
+
+.setting ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.setting ul li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.active {
+    background-color: #ccc;
+    color: #000;
+}
+
+.setting ul li:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+.openFullScreen {
+    width: 100%;
+    height: 100%;
+}
